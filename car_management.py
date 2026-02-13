@@ -15,6 +15,6 @@ while True:
 Please select a number:
     """)
     if mode == '1':
-        pass
+        Cars.add_car_from_menu()
     elif mode == '7':
         break   

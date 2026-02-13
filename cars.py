@@ -11,6 +11,27 @@ class Cars:
         self.model = model
         self.year = year
         self.mileage = mileage
+    
+    @classmethod
+    def create_car(cls, car_data):
+        new_car = cls(**car_data)
+        cls.all_cars.append(new_car)
+        cls.total_cars += 1
+        print(f"New car {new_car.id_num} has been created")
+        
+    @classmethod
+    def add_car_from_menu(cls):
+        new_car_data = {
+            'id_num': cls.total_cars + 1,
+            'make': input('Enter make of car:\n'),
+            'model': input('Enter model of car:\n'),
+            'year': input('Enter year car was made:\n'),
+            'mileage': input('Enter mileage of car:\n'),
+            'services': input('Enter any services car has had:\n')                        
+        }      
+        cls.create_car(new_car_data)
+        
+    
         
     def __repr__(self):
         return f"make: {self.make}, model: {self.model}, year: {self.year}"
