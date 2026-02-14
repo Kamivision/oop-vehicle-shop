@@ -17,7 +17,7 @@ class Cars:
         new_car = cls(**car_data)
         cls.all_cars.append(new_car)
         cls.total_cars += 1
-        print(f"New car {new_car.id_num} has been created")
+        print(f"New car {new_car.id_num} has been created\n")
         
     @classmethod
     def add_car_from_menu(cls):
@@ -34,7 +34,7 @@ class Cars:
     
         
     def __repr__(self):
-        return f"make: {self.make}, model: {self.model}, year: {self.year}"
+        return f"make: {self.make}, model: {self.model}"
         
     @property
     def id_num(self):

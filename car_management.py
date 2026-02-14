@@ -1,5 +1,8 @@
 from cars import Cars
+import Test_info
 
+
+Test_info.test_cars()
 # Terminal Application that interacts with the car class
 while True:
     mode = input("""
@@ -16,5 +19,7 @@ Please select a number:
     """)
     if mode == '1':
         Cars.add_car_from_menu()
+    elif mode == '2':
+        print(Cars.all_cars)
     elif mode == '7':
         break   
