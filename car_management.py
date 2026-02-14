@@ -23,5 +23,13 @@ Please select a number:
         print(Cars.all_cars)
     elif mode == '3':
         print(f"Total Cars: {Cars.total_cars}")
+    elif mode == '4':
+        
+        # Cars.display_car_details(car_id)
+        Cars.display_car_details()
+        # print(car)
+        # print(str(car))
+    # elif mode == '5':
+    # elif mode == '6':    
     elif mode == '7':
         break   

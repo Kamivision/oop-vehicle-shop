@@ -11,6 +11,7 @@ class Cars:
         self.model = model
         self.year = year
         self.mileage = mileage
+        self.services = services
     
     @classmethod
     def create_car(cls, car_data):
@@ -32,20 +33,25 @@ class Cars:
         cls.create_car(new_car_data)
         
     @classmethod
-    def display_car_details(cls, car_id):
-        for car in 
+    def display_car_details(cls):
+        # car_id = input('Enter car id:\n')
+        for car in cls.all_cars:
+            print(car)
+            # if car.id_num == car_id:
+            #     print(car)
         
     def __repr__(self):
         return f"make: {self.make}, model: {self.model}"
-        
-    @property
-    def id_num(self):
-        return self._id_num
     
-    @id_num.setter
-    def id_num(self, id_val):
-        if isinstance(id_val, int): 
-            self._id_num = id_val
+    def __str__(self):
+        return f"""
+    Id Number: {self.id_num}
+    Make: {self.make}
+    Model: {self.model}
+    Year: {self.year}
+    Mileage: {self.mileage}
+    Services: {self.services}
+    """
             
     @property
     def make(self):
