@@ -21,5 +21,7 @@ Please select a number:
         Cars.add_car_from_menu()
     elif mode == '2':
         print(Cars.all_cars)
+    elif mode == '3':
+        print(f"Total Cars: {Cars.total_cars}")
     elif mode == '7':
         break   

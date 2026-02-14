@@ -31,7 +31,9 @@ class Cars:
         }      
         cls.create_car(new_car_data)
         
-    
+    @classmethod
+    def display_car_details(cls, car_id):
+        for car in 
         
     def __repr__(self):
         return f"make: {self.make}, model: {self.model}"
